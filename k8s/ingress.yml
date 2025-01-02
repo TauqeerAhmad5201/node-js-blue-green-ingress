@@ -17,14 +17,14 @@ spec:
           service:
             name: blue-service
             port:
-              number: 3000
+              number: 3000    # This port number should match the targetPort in the blue-service.yaml, and the content from port 80 or 443 from browser forwared to this port.
       - path: /green
         pathType: Prefix
         backend:
           service:
             name: green-service
             port:
-              number: 3000
+              number: 3000    # This port number should match the targetPort in the green-service.yaml, and the content from port 80 or 443 from browser forwared to this port.
       - path: /           # Default path
         pathType: Exact
         backend:
